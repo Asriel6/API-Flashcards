@@ -1,30 +1,30 @@
 {
-  "name": "api-flashcards",
+  "name": "td5",
   "version": "1.0.0",
-  "description": "Project do dev a RESTful API",
-  "homepage": "https://github.com/Asriel6/API-Flashcards#readme",
-  "bugs": {
-    "url": "https://github.com/Asriel6/API-Flashcards/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Asriel6/API-Flashcards.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "node ./src/db/seed.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
   "dependencies": {
     "@libsql/client": "^0.15.15",
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.3",
-    "drizzle-orm": "^0.45.1",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "nodemon": "^3.1.11",
-    "zod": "^4.1.13"
+    "drizzle-orm": "^0.44.6",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.5"
   }
 }
