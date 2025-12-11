@@ -12,9 +12,11 @@ export const personnalFlashCardsTable = sqliteTable('PersonnalFlashCards',{
 
     level: integer().notNull().default(1),
 
-    lastStudyDate: date(),
+    lastStudyDate: integer('lastStudyDate',{mode: 'timestamp'})
+    .$defaultFn(() => new Date()),
 
-    nextStudyDate: date(),
+    nextStudyDate: integer('nextStudyDate',{mode: 'timestamp'})
+    .$defaultFn(() => new Date()),
 
     flashCardId: text()
     .notNull()
@@ -66,7 +68,7 @@ export const usersTable = sqliteTable('Users',{
     surname: text('surname',{length : 255})
     .notNull(),
 
-    isAdmin: boolean()
+    isAdmin: integer('isAdmin',{mode: 'boolean'})
     .notNull()
 
 })
@@ -87,6 +89,6 @@ export const collectionTable = sqliteTable('Collection',{
     description: text('description', {length : 255})
     .notNull(),
 
-    visbility: text({enum:['public', 'private']})
+    visibility: text({enum:['public', 'private']})
     .notNull()
 })
