@@ -1,0 +1,11 @@
+npm init -y
+
+npm install nodemon
+npm install express
+npm install zod
+npm install bcrypt
+npm install jsonwebtoken
+
+drizzle:
+npm install drizzle-orm @libsql/client dotenv
+npm install -D drizzle-kit
