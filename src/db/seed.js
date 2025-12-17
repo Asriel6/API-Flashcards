@@ -94,32 +94,32 @@ async function seed(){
 
             {
                 level: 1,
-                lastStudyDate:'10-12-2025',
-                nextStudyDate:'11-12-2025',
+                lastStudyDate: new Date('10-12-2025')  ,
+                nextStudyDate:new Date('11-12-2025'),
                 flashCardId: FlashCards[0].id,
                 userId: users[0].id
             }, 
 
             {
                 level: 1,
-                lastStudyDate:'13-12-2025',
-                nextStudyDate:'14-12-2025',
+                lastStudyDate:new Date('11-12-2025'),
+                nextStudyDate:new Date('10-12-2025'),
                 flashCardId: FlashCards[1].id,
                 userId: users[0].id
             },
             
             {
                 level: 1,
-                lastStudyDate:'15-12-2025',
-                nextStudyDate:'16-12-2025',
+                lastStudyDate:new Date('10-12-2025'),
+                nextStudyDate:new Date('10-12-2025'),
                 flashCardId: FlashCards[2].id,
                 userId: users[1].id
             },
             
             {
                 level: 1,
-                lastStudyDate:'18-12-2025',
-                nextStudyDate:'19-12-2025',
+                lastStudyDate:new Date('10-12-2025'),
+                nextStudyDate:new Date('10-12-2025'),
                 flashCardId: FlashCards[3].id,
                 userId: users[1].id
             },

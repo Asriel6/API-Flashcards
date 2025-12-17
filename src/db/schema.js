@@ -5,9 +5,11 @@ import { boolean, date } from 'zod'
 
 export const personnalFlashCardsTable = sqliteTable('PersonnalFlashCards',{
 
-    userId: text()
+    id: text()
     .primaryKey()
-    .$defaultFn(()=> crypto.randomUUID())
+    .$defaultFn(() => crypto.randomUUID()),
+
+    userId: text()
     .references(() => usersTable.id, {onDelete: 'cascade'}),
 
     level: integer().notNull().default(1),
