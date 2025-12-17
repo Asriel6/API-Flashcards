@@ -70,8 +70,8 @@ export const usersTable = sqliteTable('Users',{
     surname: text('surname',{length : 255})
     .notNull(),
 
-    isAdmin: integer('isAdmin',{mode: 'boolean'})
-    .notNull()
+    /*isAdmin: integer('isAdmin',{mode: 'boolean'})
+    .notNull()*/
 
 })
 

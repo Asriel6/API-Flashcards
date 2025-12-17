@@ -24,17 +24,17 @@ export const register = async (req, res) => {
             id: usersTable.id
         })
 
-        const token = jwt.sign(
-            { userId: newUser.id, role: newUser.role },
-            process.env.JWT_SECRET,
-            { expiresIn: '24h' }
-        )
+        // const token = jwt.sign(
+        //     { userId: newUser.id, role: newUser.role },
+        //     process.env.JWT_SECRET,
+        //     { expiresIn: '24h' }
+        // )
         
 
         res.status(201).json({
             message: 'user created',
-            userData: newUser,
-            token,
+            userData: newUser
+//token           
         })
 
     } catch (error) {

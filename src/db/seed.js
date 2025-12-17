@@ -19,7 +19,7 @@ async function seed(){
 				name:'Toto',
                 surname:'Titi',
 				password: bcrypt.hashSync('motdepasse', 12),
-                isAdmin: 0
+                //isAdmin: 0
 			},
 
 			{
@@ -27,7 +27,7 @@ async function seed(){
 				name:'Admin',
                 surname:'Super',
 				password: bcrypt.hashSync('motdepasse', 12),
-                isAdmin: 1
+                //isAdmin: 1
 			},
 
             {
@@ -35,7 +35,7 @@ async function seed(){
 				name:'Jean',
                 surname:'Beur',
 				password: bcrypt.hashSync('motdepasse', 12),
-                isAdmin: 0
+                //isAdmin: 0
 			},
 		]
 		const users = await db.insert(usersTable).values(seedUsers).returning() //On récupère les id des users
