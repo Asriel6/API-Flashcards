@@ -1,0 +1,11 @@
+//For debugging purposes, might delete later
+const logger = (req, res, next) => {
+    const { method, host } = req
+    const time = new Date().toLocaleTimeString()
+
+    console.log(`${time} : ${method} - ${host}`)
+
+    next()
+}
+
+export default logger
