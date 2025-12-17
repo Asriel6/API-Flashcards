@@ -70,8 +70,7 @@ export const usersTable = sqliteTable('Users',{
     surname: text('surname',{length : 255})
     .notNull(),
 
-    /*isAdmin: integer('isAdmin',{mode: 'boolean'})
-    .notNull()*/
+    role: text({ enum: ['USER', 'ADMIN'] }).notNull().default('USER'),
 
 })
 

@@ -22,7 +22,7 @@ export const authenticatetoken = (req, res, next) => {
 
         req.user = {
         userId: decoded.userId,
-        role: decoded.role /* ou Boolean*/,
+        role: decoded.role,
         };
 
         next();
