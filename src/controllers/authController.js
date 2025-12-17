@@ -8,16 +8,19 @@ import { eq } from "drizzle-orm";
 
 export const register = async (req, res) => {
     try {
-        const { email, password } = req.body
+        const { email, name, surname, password } = req.body
 
         const hashedPassword = await bcrypt.hash(password, 12)
 
         const [newUser] = await db.insert(usersTable).values({
             email,
+            name,
+            surname,
             password: hashedPassword,
         }).returning({
             email: usersTable.email,
             name: usersTable.name,
+            surname: usersTable.surname,
             id: usersTable.id
         })
 
