@@ -91,7 +91,7 @@ async function seed(){
         const FlashCards = await db.insert(flashCardTable).values(seedFlashCards).returning()
         
         const seedPersonnalFlashCards = [
-
+            //Attention c'est mois/jour/année
             {
                 level: 1,
                 lastStudyDate: new Date('10-12-2025')  ,
