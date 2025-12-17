@@ -7,4 +7,5 @@ https://clementcatel.notion.site/R5-05-Projet-de-groupe-2ae3b8266dbb8014b0aac386
 # Lien du Eraser (BDD)
 https://app.eraser.io/workspace/01gYJK25JWKMlChhTTyp
 
-<img width="1372" height="1060" alt="diagram-export-10-12-2025-11_25_23" src="https://github.com/user-attachments/assets/d0503818-2108-4343-a6ce-a63322376083" />
+<img width="670" height="506" alt="image" src="https://github.com/user-attachments/assets/8ad47670-ed00-43ee-bf62-63ecd7852da3" />
+
