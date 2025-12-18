@@ -7,6 +7,7 @@ npm install express
 npm install zod
 npm install bcrypt
 npm install jsonwebtoken
+npm audit fix --force
 
 REM Installation de Drizzle ORM
 npm install drizzle-orm @libsql/client dotenv
