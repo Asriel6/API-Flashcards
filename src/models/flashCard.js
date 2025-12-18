@@ -10,6 +10,4 @@ export const createFlashCardSchema = z.object({
     versoUrl : z.string(),
     
     collectionId: z.string().min(1,'The flashcard needs to belong to a collection !'),
-    ownerId: z.string().min(1,'The flashcard needs to belong to someone !'),
-
 })

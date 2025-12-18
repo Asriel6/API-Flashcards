@@ -1,0 +1,17 @@
+import { Router } from "express";
+import { validateBody } from "../middlewares/validation.js";
+import { createFlashCardSchema} from "../models/flashCard.js";
+import { deleteFlashcard, getAllFlashcards, createFlashcard } from "../controllers/flashCardController.js";
+import {authenticatetoken} from '../middlewares/authentificationToken.js'
+
+const router = Router()
+
+router.use(authenticatetoken)
+
+router.get('/', getAllFlashcards)
+
+router.post('/', validateBody(createFlashCardSchema), createFlashcard)
+
+router.delete('/:id', deleteFlashcard)
+
+export default router
