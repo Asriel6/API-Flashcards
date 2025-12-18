@@ -1,6 +1,6 @@
 import express from 'express'
 import userRoutes from './routers/usersRoutes.js'
-//import logger from './middleware/logger.js'
+import logger from './middlewares/logger.js'
 import authRouter from './routers/authRouter.js'
 
 const PORT = process.env.PORT || 3000
@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.use(express.json())
-//app.use(logger)
+app.use(logger)
 app.use('/users', userRoutes)
 app.use('/auth', authRouter)
 

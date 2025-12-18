@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { authenticatetoken } from "../middleware/authenticateToken.js";
-import { isAdmin } from "../middleware/isAdmin.js";
+import { authenticatetoken } from "../middlewares/authentificationToken.js";
+import { isAdmin } from "../middlewares/isAdmin.js";
 import {
     getAllUsers,
     getUserById,
