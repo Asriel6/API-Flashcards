@@ -1,11 +1,7 @@
 import { Router } from "express";
 import { authenticatetoken } from "../middlewares/authentificationToken.js";
 import { isAdmin } from "../middlewares/isAdmin.js";
-import {
-    getAllUsers,
-    getUserById,
-    deleteUserById,
-} from "../controllers/adminUserController.js";
+import {getAllUsers,getUserById,deleteUserById} from "../controllers/adminuserController.js";
 
 const router = Router();
 

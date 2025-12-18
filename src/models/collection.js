@@ -2,9 +2,8 @@ import { z } from 'zod'
 
 const visibilityEnum = z.enum(['public', 'private'])
 
-export const createUser = z.object({
+export const createCollectionSchema = z.object({
 
-    ownerId : z.string(),
     title: z.string().min(5,'The title of your collection must be at least 5 characters long').max(255, 'The title of your collection is too long !'),
     description: z.string().min(5,'The description of your collection must be at least 5 characters long').max(255, 'The description of your collection is too long !'),
     visibility: visibilityEnum
